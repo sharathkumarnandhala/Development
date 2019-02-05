@@ -1,0 +1,34 @@
+<!--<h3> {{name}}</h3>-->
+<!--<p>product</p>-->
+
+<h3>product component</h3>
+<div>
+  <h2>product no:{{no}}</h2>
+   <h2>product Name:{{name}}</h2>
+    <h2>product cost:{{cost}}</h2>
+    <input type="button" [value]=propertybinding (click)="status()"/>
+
+    <input type="text" [(ngModel)]="towaybinding"/>
+    <input type="text" value={{towaybinding}}/>
+   
+    <div>
+      <table appCustom>
+     <tr>
+        <td>product no</td>
+        <td>devicename</td>
+        <td>price</td>
+      </tr>
+      <tr *ngFor="let product of products">
+             <td>{{product.pno}} </td>
+      </tr>
+      </table>
+      <div style="color:blue">
+        <h4>this is style</h4>
+      </div>
+       <div [ngStyle]="ApplyStyles()">
+        this is style2
+      </div> 
+    </div>
+
+
+</div>
